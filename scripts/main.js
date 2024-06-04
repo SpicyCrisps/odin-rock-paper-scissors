@@ -26,6 +26,7 @@ function getComputerChoice() {
 
 }
 
+//Could probably be a nicer switch
 function getHumanChoice(playerChoice) {
 
     let validChoice = null
