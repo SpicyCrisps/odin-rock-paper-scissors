@@ -3,6 +3,14 @@ let roundsMax = 5
 let humanScore = 0
 let computerScore = 0
 
+const root = document
+
+//const button_play
+const button_rock = document.getElementById("btn_rock").addEventListener("click", ()=> getHumanChoice(0))
+const button_paper = document.getElementById("btn_paper").addEventListener("click", ()=> getHumanChoice(1))
+const button_scissors = document.getElementById("btn_scissors").addEventListener("click", ()=> getHumanChoice(2))
+
+
 function getComputerChoice() {
     r = Math.random();
 
@@ -18,20 +26,22 @@ function getComputerChoice() {
 
 }
 
-function getHumanChoice() {
+function getHumanChoice(playerChoice) {
 
     let validChoice = null
-    let playerChoice = null
+    //let playerChoice = null
     while(validChoice != true)
     {
-        playerChoice = prompt("What is your Choice? \n0: rock 1: paper 2: scissors","");
+        //playerChoice = prompt("What is your Choice? \n0: rock 1: paper 2: scissors","");
        
         if(playerChoice == "0")
             {playerChoice = "rock"; validChoice = true;}
         else if (playerChoice == '1')
             {playerChoice = "paper"; validChoice = true;}
         else if (playerChoice == "2")
-            {playerChoice = "scissors"; validChoice = true;}
+            {playerChoice = "scissors"; validChoice = true;
+              console.log("SUCCESS!"); 
+            }
         else
             { console.log("Please try again!");}
     }
@@ -83,7 +93,9 @@ function playRound(humanChoice, computerChoice)
 }
 
 
-function playGame()
+
+
+/*function playGame()
 {
     while(roundsDone < roundsMax)
         {
@@ -104,3 +116,4 @@ function playGame()
 }
 
 playGame();
+*/
